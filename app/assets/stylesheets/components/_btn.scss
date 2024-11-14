@@ -1,0 +1,67 @@
+.btn-newlist{
+  display: block;
+  margin: 30px auto;
+  background-color: #48CFCB;
+  color: black;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+.btn-newlist:hover{
+  color: #F5F5F5;
+}
+
+.delete-button {
+  display: flex;
+  justify-content: right;
+  color: #424242;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  color: #F5F5F5;
+}
+
+
+.add-new-btn {
+  display: block;
+  margin: 30px auto;
+  background-color: #48CFCB;
+  color: black;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.add-new-btn:hover{
+color: #F5F5F5 ;
+}
+
+.back-btn{display: block;
+  margin: 30px auto;
+  background-color: #48CFCB;
+  color: black;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;}
+
+.back-btn:hover{
+  color:white;
+}
+
+.btn-lists{
+  text-decoration: none;
+  color: #F5F5F5
+}
+
+.btn-lists:hover{
+  color: #48CFCB;
+}

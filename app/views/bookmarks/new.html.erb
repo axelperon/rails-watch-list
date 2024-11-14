@@ -1,0 +1,20 @@
+<%# <%= simple_form_for (:bookmarks, :movies => {:action => 'create'} ) do |b| %>
+  <%# <%= b.association :movies %>
+  <%# <%= b.button :submit %>
+<%# <% end %>
+
+
+
+<%# @list %>
+
+ <%= simple_form_for [@list, @bookmark] do |b| %>
+  <%= b.input :comment %>
+  <%= b.association :movie %>
+  <%= b.button :submit %>
+<% end %>
+
+<%# <%= simple_form_for @bookmark do |b| %>
+  <%# <%= b.input :name %>
+  <%# <%= b.association :movie, collection: @movies %>
+  <%# <%= b.button :submit %>
+<%# <% end %>

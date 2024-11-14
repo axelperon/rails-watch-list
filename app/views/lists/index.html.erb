@@ -1,0 +1,17 @@
+ <h1><%= "All List" %></h1>
+<div class="cards">
+
+  <% @lists.each do |list| %>
+
+
+
+   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://st4.depositphotos.com/25397710/27063/i/450/depositphotos_270631862-stock-photo-movies-word-cloud-movies-typography.jpg)">
+<%= link_to "#{list.name}", list_path(list), class: "btn-lists"  %>
+</div>
+<% end %>
+
+</div>
+
+
+<%= link_to "create a new list", new_list_path, class: "btn-newlist"  %>
+
