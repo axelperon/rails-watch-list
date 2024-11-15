@@ -1,10 +1,12 @@
 <div class="container">
 <h1><%= "New list" %></h1>
-
+<div class="containere-form">
+  <div class="form">
  <%= simple_form_for @list do |l|  %>
   <%= l.input :name %>
-  <%= l.button :submit %>
+  <%= l.button :submit, class:"btn-form" %>
 <% end %>
-
+</div>
+</div>
 <%= link_to "I'll be back", lists_path, class: "back-btn"  %>
 </div>

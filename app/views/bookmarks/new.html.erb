@@ -6,12 +6,19 @@
 
 
 <%# @list %>
+<div class="container">
+<h1> <%=   "new Movie" %> </h1>
 
+<div class="containere-form">
+<div class="form">
  <%= simple_form_for [@list, @bookmark] do |b| %>
   <%= b.input :comment %>
   <%= b.association :movie %>
-  <%= b.button :submit %>
+  <%= b.button :submit, class:"btn-form" %>
 <% end %>
+</div>
+</div>
+</div>
 
 <%# <%= simple_form_for @bookmark do |b| %>
   <%# <%= b.input :name %>

@@ -1,17 +1,26 @@
+<div class="banniere">
+<div class="h1-container">
  <h1><%= "All List" %></h1>
+</div>
+
+<div class="card-container">
 <div class="cards">
 
   <% @lists.each do |list| %>
 
 
 
-   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://st4.depositphotos.com/25397710/27063/i/450/depositphotos_270631862-stock-photo-movies-word-cloud-movies-typography.jpg)">
+   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFJ1ZBGrr-WC5ogQi2I2_geaNhGXPK29Gy0w&s)">
 <%= link_to "#{list.name}", list_path(list), class: "btn-lists"  %>
+<%= link_to list_path(list), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "delete-button-list" do %>
+        <i class="fa-solid fa-crosshairs"></i>
+      <% end %>
 </div>
 <% end %>
 
 </div>
-
-
+</div>
+<div class="btn-container">
 <%= link_to "create a new list", new_list_path, class: "btn-newlist"  %>
-
+</div>
+</div>
