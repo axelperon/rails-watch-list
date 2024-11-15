@@ -13,9 +13,8 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.create(list_params)
-    @list.save
-
+    @list = List.new(list_params)
+    @list.save!
     redirect_to lists_path
   end
 
@@ -25,11 +24,20 @@ class ListsController < ApplicationController
    redirect_to list_path(@list)
    end
 
+   def search
+    @list = List.find_by(name: params[:query][:name])
+
+    if @list
+    redirect_to list_path(@list)
+    else
+      redirect_to lists_path
+    end
+   end
 
   private
 
   def list_params
-    params.require(:list).permit(:name)
+    params.require(:list).permit(:name, :photo)
   end
 
 end

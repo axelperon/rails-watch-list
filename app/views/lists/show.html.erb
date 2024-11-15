@@ -1,18 +1,36 @@
 
 <div class="banniere">
+
+
+  <div class="navbar-home">
+  <nav>
+    <a class="nav-link" href="/lists_path">Home <i class="fa-solid fa-house"></i></a>
+    <a class="nav-link" href="#">Add Movie <i class="fa-solid fa-film"></i></a>
+    <div class="navform">
+        <%= simple_form_for :query, url: lists_search_path do |f| %>
+       <%= f.input :name, label: false%>
+        <%= f.button :submit, class:"btn-search"%>
+         <% end %>
+    </div>
+  </nav>
+</div>
+
 <h1><%= "List Details" %></h1>
+
+
+
+
+
+
+
 
 
  <% @bookmarks.each do |bookmark| %>
   <div class="card-product">
-
     <img src="<%= bookmark.movie.poster_url %>" alt="<%= bookmark.movie.title %>" />
-
     <div class="card-product-infos">
-
       <h2><%= bookmark.movie.title %></h2>
       <p><%= bookmark.comment %></p>
-
     </div>
       <%= link_to bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "delete-button" do %>
         <i class="fa-solid fa-trash"></i>

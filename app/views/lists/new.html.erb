@@ -2,9 +2,10 @@
 <h1><%= "New list" %></h1>
 <div class="containere-form">
   <div class="form">
- <%= simple_form_for @list do |l|  %>
-  <%= l.input :name %>
-  <%= l.button :submit, class:"btn-form" %>
+ <%= simple_form_for @list do |f|  %>
+  <%= f.input :name %>
+ <%=  f.input :photo, as: :file %>
+  <%= f.button :submit, class:"btn-form" %>
 <% end %>
 </div>
 </div>
